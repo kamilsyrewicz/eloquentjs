@@ -22,17 +22,3 @@ function sum(numbers) {
   return result;
 }
 
-const initialState = {
-  a: 4,
-  b: 5,
-};
-
-const spreadObject = obj => ({
-  ...initialState,
-  ...obj,
-});
-
-const { a: newA, b } = initialState;
-console.log(initialState);
-
-console.log(newA, b);
