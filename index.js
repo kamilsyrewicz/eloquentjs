@@ -1,13 +1,13 @@
-function reverseArray(Array) {
+function reverseArray(elements) {
   const newArray = [];
-  const a = Array.length;
+  const a = elements.length;
   for (let i = 0; i < a; i++) {
-    newArray.push(Array[a - i - 1]);
+    newArray.push(elements[a - i - 1]);
   }
   return newArray;
 }
-function reverseArrayInPlace(Array) {
-  return reverseArray(Array);
+function reverseArrayInPlace(elements) {
+  return reverseArray(elements);
 }
 console.log(reverseArray(['A', 'B', 'C']));
 // → ["C", "B", "A"];
