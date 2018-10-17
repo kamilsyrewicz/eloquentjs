@@ -6,9 +6,14 @@ function reverseArray(elements) {
   }
   return newArray;
 }
-function reverseArrayInPlace(elements) {
-  return reverseArray(elements);
-}
+const reverseArrayInPlace = (elements) => {
+  const elementsCount = elements.length - 1;
+  for (i = 0; i < Math.floor(elements.length / 2); i++) {
+    const a = elements[i];
+    elements[i] = elements[elementsCount - i];
+    elements[elementsCount - i] = a;
+  }
+};
 console.log(reverseArray(['A', 'B', 'C']));
 // → ["C", "B", "A"];
 const arrayValue = [1, 2, 3, 4, 5];
