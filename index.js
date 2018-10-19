@@ -13,6 +13,7 @@ const reverseArrayInPlace = (elements) => {
     elements[i] = elements[elementsCount - i];
     elements[elementsCount - i] = a;
   }
+  return elements;
 };
 console.log(reverseArray(['A', 'B', 'C']));
 // → ["C", "B", "A"];
