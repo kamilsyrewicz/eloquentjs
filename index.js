@@ -9,10 +9,11 @@ function arrayToList(elements) {
 function listToArray(elements) {
   const array = [];
   let a = elements;
-  while (a.rest != undefined) {
+  while (a.rest !== null) {
     array.push(a.value);
     a = a.rest;
   }
+  array.push(a.value);
   return array;
 }
 // /////////////////////////////////////////////// //
@@ -24,9 +25,13 @@ function prepend(position, list) {
 function nth(elements, position) {
   const array = [];
   let a = elements;
-  while (a.rest != undefined) {
+  while (a.rest !== null) {
     array.push(a.value);
     a = a.rest;
   }
+  array.push(a.value);
   return array[position];
 }
+export {
+  arrayToList, listToArray, prepend, nth,
+};
